@@ -90,10 +90,10 @@ function mortgageCalculator(P, I, N) {
     let interestRate = I;
     let years = 30;
     const name = "Elizabeth"
-    let monthlyInterestRate = interestRate / 12;
+    let monthlyInterestRate = I / 12;
     let periods = N;
     let n1 = Math.pow((1 + monthlyInterestRate), periods);
-    let numerator = principal * n1 * monthlyInterestRate;
+    let numerator = P * n1 * monthlyInterestRate;
     let denominator = n1 - 1;
     let monthlyRate = numerator / denominator; 
     monthlyRate = monthlyRate.toFixed(2);
@@ -111,6 +111,25 @@ Hint: To drop an interest rate by 5% you can take monthlyRate and multiply it by
 */
 
 
+function mortgageCalculator(P, I, N, creditScore) {
+    if (creditScore > 740){
+        I = I * 0.95;
+    } else if (creditScore < 660){
+        I = I * 1.05;
+    }   
+    let principal = P;
+    let interestRate = I;
+    let years = 30;
+    const name = "Elizabeth"
+    let monthlyInterestRate = I / 12;
+    let periods = N;
+    let n1 = Math.pow((1 + monthlyInterestRate), periods);
+    let numerator = P * n1 * monthlyInterestRate;
+    let denominator = n1 - 1;
+    let monthlyRate = numerator / denominator; 
+    monthlyRate = monthlyRate.toFixed(2);
+    console.log(name + ", your monthly rate is $" + monthlyRate);
+}
 
 
 // 🏡 Task 6: Loops
