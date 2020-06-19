@@ -40,7 +40,7 @@ Check out the resources below for more of a step-by-step walk-through of this ma
 
 ## Instructions
 
-### Task 1: Set up Project
+### Task 1: Set up Project - Completed
 
 Using VSCode and Command Line:
 
