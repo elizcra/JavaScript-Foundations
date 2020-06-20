@@ -49,7 +49,7 @@ Using VSCode and Command Line:
 3. `cd` into your newly cloned repository.
 4. Create a new branch by typing `git checkout -b <firstName-lastName>`.
 
-### Task 2: Complete MVP Requirements
+### Task 2: Complete MVP Requirements - Completed
 
 Find the `index.js` file and complete the tasks as written. Your final product should be a function called `variableInterestRate` that accepts a `principal`, `interest rate`, `mortgage length`, and `credit score` and returns 10 different options of monthly payments.
 

@@ -149,6 +149,23 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 */
 
 
+function variableInterestRate (P, I, N){
+   
+    let principal = P;      
+    let interestRate = I;
+    let variableRate = I - 0.02; 
+    const name = 'Elizabeth';
+    let years = 30;
+    N = years * 12;
+    for (let i = 0; i < 9; i++ , variableRate += 0.005){
+    let monthlyInterestRate = variableRate / 12;
+    const top = monthlyInterestRate * Math.pow((1+monthlyInterestRate), N); 
+    const bottom = Math.pow((1+monthlyInterestRate), N) - 1; 
+    let monthlyRate = P * (top / bottom); 
+    console.log(name + ", with an interest rate of " + (Math.round(variableRate*1000)/1000) + ", your monthly rate is $" + Math.round(monthlyRate)); 
+    }
+}
+variableInterestRate(200000, 0.04, 30); 
 
 
 // 🌟🌟🌟 STRETCH 🌟🌟🌟//
